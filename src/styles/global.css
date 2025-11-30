@@ -26,6 +26,13 @@ body {
     filter: drop-shadow(3px 3px 3px var(--color-base-300));
 }
 
+.navbar-brand p {
+    font-size: 1rem;
+    font-variation-settings: "wdth" 83, "wght" 600;
+    color: var(--color-base-700);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+
 .container {
     display: flex;
     justify-content: center;

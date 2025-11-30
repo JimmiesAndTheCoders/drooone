@@ -1,13 +1,10 @@
 ---
-import { Image } from "astro:assets"
-import logo from "../assets/logo.svg"
+import Logo from './Logo.astro'
 ---
 
 <nav class="navbar">
   <div class="container">
-    <a href="/" class="navbar-brand">
-      <Image src={logo} alt="Drooone Logo" width={256} />
-    </a>
+    <Logo />
     <ul class="navbar-menu">
       <li><a href="/about">About</a></li>
       <li><a href="/download">Download</a></li>
