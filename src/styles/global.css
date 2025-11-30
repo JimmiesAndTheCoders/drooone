@@ -1,0 +1,81 @@
+/* Tailwind and DaisyUI Plugins */
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Font */
+@import '@fontsource-variable/ubuntu-sans/wdth.css';
+
+/* Global Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu Sans Variable', sans-serif;
+    color: var(--color-base-900);
+    line-height: 1.6;
+}
+
+.navbar {
+    padding: 2rem 15rem 0rem 15rem;
+}
+
+.navbar-brand {
+    filter: drop-shadow(3px 3px 3px var(--color-base-300));
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    background-color: var(--color-base-200);
+    padding: 0.5rem 1.25rem;
+    border-radius: 40rem;
+    box-shadow: 3px 3px 3px var(--color-base-300);
+}
+
+.navbar-menu li {
+    list-style: none;
+}
+
+.navbar-menu a {
+    color: white;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-variation-settings: "wdth" 75, "wght" 800;
+    font-size: 1.35rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: var(--color-primary);
+}
+
+main {
+    margin: 1rem 15rem 1rem 15rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--color-base-200);
+    border: 5px solid var(--color-base-300);
+    box-shadow: 3px 3px 3px var(--color-base-200);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-base-700);
+}
+
+footer p {
+    display: inline-block;
+}
