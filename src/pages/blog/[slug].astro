@@ -1,5 +1,10 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
+import mdxLogo from '../../assets/mdx-logo-light.svg';
+import astroIcon from '../../assets/astro-icon-light.svg';
+import { Icon } from 'astro-icon/components'
+import '../../styles/mdx.css';
+import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -23,12 +28,34 @@ const { Content } = await post.render();
     <title>{post.data.title}</title>
     <meta name="description" content={post.data.description} />
   </head>
-  <body>
-    <article>
-      <h1>{post.data.title}</h1>
-      <p>By {post.data.author} on {post.data.pubDate.toLocaleDateString()}</p>
+  <body class="mdx-body">
+    <div class="mdx-sidebar">
+      <Icon name="line-md:arrow-small-left" class="mdx-back-icon" />
+      <a href="/blog" class="mdx-back-link">Back to Blog</a>
+    </div>
+    <article class="mdx-container">
+      <div class="mdx-dir">
+        <Icon name="line-md:folder" class="mdx-dir-icon" />
+        <span class="mdx-dir-text">/blog/{post.slug}</span>
+      </div>
+      <hr class="horizontal-rule" />
+      <h1 class="mdx-title">{post.data.title}</h1>
+      <p class="mdx-description">By {post.data.author} on {post.data.pubDate.toLocaleDateString()}</p>
       
-      <Content /> 
+      <div class="mdx-content">
+        <Content /> 
+      </div>
+
+      <div class="mdx-end">
+        <p class="mdx-end-text">Made by using</p>
+        <a href="https://mdxjs.com/">
+          <Image src={mdxLogo} alt="MDX Logo" class="mdx-end-logo" loading="eager" />
+        </a>
+        <p class="mdx-end-text">and</p>
+        <a href="https://astro.build">
+          <Image src={astroIcon} alt="Astro Logo" class="astro-end-logo" loading="eager" />
+        </a>
+      </div>
     </article>
   </body>
 </html>

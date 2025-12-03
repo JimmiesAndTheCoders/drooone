@@ -11,8 +11,10 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.12",
     "@fontsource-variable/ubuntu-sans": "^5.2.10",
+    "@iconify-json/line-md": "^1.2.11",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.3",
+    "astro-icon": "^1.1.5",
     "daisyui": "^5.5.5",
     "tailwindcss": "^4.1.17"
   }

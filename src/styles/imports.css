@@ -1,0 +1,9 @@
+/* Tailwind and DaisyUI Plugins */
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Font */
+@import '@fontsource-variable/ubuntu-sans/wdth.css';
+
+/* Variables */
+@import './variables.css';

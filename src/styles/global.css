@@ -1,16 +1,7 @@
-/* Tailwind and DaisyUI Plugins */
-@import "tailwindcss";
-@plugin "daisyui";
-
-/* Font */
-@import '@fontsource-variable/ubuntu-sans/wdth.css';
+/* Imports */
+@import './imports.css';
 
 /* Global Styles */
-:root {
-    --drooone-orange: #e53612;
-    --drooone-orange-light: #ff7043;
-    --drooone-orange-dark: #b22a0e;
-}
 
 *{
     margin: 0;
